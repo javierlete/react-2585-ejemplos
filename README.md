@@ -1,6 +1,6 @@
 # Ejemplos de REACT
 
-Ejercicio
+## Ejercicio
 
 Crear este componente
 ```
