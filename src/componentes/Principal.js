@@ -3,6 +3,7 @@ import Contador from "./Contador";
 
 export default function Principal() {
     const [nombre, setNombre] = useState('');
+    const [noPodreisPasar, setNoPodreisPasar] = useState(false);
 
     function alCambiarNombre(e) {
         setNombre(e.target.value);
@@ -10,8 +11,10 @@ export default function Principal() {
 
     return (
         <main>
-            <Contador />
-            <Contador />
+            <Contador maximo="10" onAlarma={() => alert('Alarma')} />
+            <Contador maximo="5" onAlarma={() => setNoPodreisPasar(true)} />
+
+            <p>{noPodreisPasar ? 'No podreis pasar' : 'Pasad'}</p>
 
             <form>
                 <button onClick={() => alert('Saludo')}>Saludar</button>
