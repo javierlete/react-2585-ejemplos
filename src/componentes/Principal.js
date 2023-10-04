@@ -1,10 +1,24 @@
+import { useState } from "react";
+import Contador from "./Contador";
+
 export default function Principal() {
-    return <main>
-        <h1>Documento principal</h1>
-        <p>Prueba de texto</p>
-        <p>Prueba de texto</p>
-        <p>Prueba de texto</p>
-        <p>Prueba de texto</p>
-        <p>Prueba de texto</p>
-    </main>;
+    const [nombre, setNombre] = useState('');
+
+    function alCambiarNombre(e) {
+        setNombre(e.target.value);
+    }
+
+    return (
+        <main>
+            <Contador />
+            <Contador />
+
+            <form>
+                <button onClick={() => alert('Saludo')}>Saludar</button>
+
+                <input onChange={e => alCambiarNombre(e)} type="text" placeholder="Dime tu nombre" />
+                <p>Hola {nombre}</p>
+            </form>
+        </main>
+    );
 }
