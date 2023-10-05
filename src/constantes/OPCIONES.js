@@ -1,5 +1,6 @@
 export default [
-    { url: 'primero', texto: 'Primero' },
-    { url: 'segundo', texto: 'Segundo' },
-    { url: 'tercero', texto: 'Tercero' }
+    { url: 'login', texto: 'Login' },
+    { url: 'labelinput', texto: 'LabelInput' },
+    { url: 'contador', texto: 'Contador' },
+    { url: 'formulario', texto: 'Formulario' },
 ];
