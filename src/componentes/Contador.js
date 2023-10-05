@@ -16,7 +16,7 @@ export default function Contador({ maximo, onAlarma }) {
     return (
         <div>
             <button onClick={() => setNumero(numero - 1)}>-</button>
-            <input type="number" value={numero} />
+            <input type="number" readOnly={true} value={numero} />
             <button onClick={() => subirValor()}>+</button>
         </div>
     );
